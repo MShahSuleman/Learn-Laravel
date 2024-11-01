@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/src/loginpage/login.css">
-    <title>Modern Login Page | AsmrProg</title>
+    <title>Login</title>
 </head>
 <body>
 
-    <div class="container" id="container">
+    <div class="container show-signup" id="container">
         <div class="form-container sign-up">
             <form>
                 <h1>Create Account</h1>

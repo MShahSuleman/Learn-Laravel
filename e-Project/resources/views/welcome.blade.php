@@ -278,15 +278,15 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black">Sound Group</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" style="color: black">
-          
+          To continue listening on Sound Group, first you have to <strong style="cursor: pointer">Login/SignUp</strong> 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <a href="/login"><button type="button" class="btn btn-outline-success" >login</button></a>
+          <a href="/login"><button type="button" class="btn btn-success">SignUp</button></a>
         </div>
       </div>
     </div>
