@@ -14,3 +14,6 @@ Route::get('/open-letter', function () {
 Route::get('/login',function(){
     return view('pages.login');
 });
+Route::get('/about', function () {
+    return view('pages.aboutus');
+});

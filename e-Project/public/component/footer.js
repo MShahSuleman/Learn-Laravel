@@ -25,7 +25,7 @@ class Footer extends HTMLElement{
 						<div class="fn-left">
 							<p>COMPANY</p>
 							<div>
-								<a href="">About</a>
+								<a href="/about">About</a>
 							</div>
 							<div>
 								<a href="">Works</a>
