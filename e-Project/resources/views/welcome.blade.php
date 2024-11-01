@@ -430,13 +430,14 @@
               
             </div>
         </div>   <!-- 8th Card End -->
-   </marquee>
-   <!-- Artists End -->
-   
-   
-       <!-- Cards Start -->
-       <div class="section">
-           <h2>Suggested for You </h2>
+    </marquee>
+    <!-- Artists End -->
+    
+    
+    <!-- Cards Start -->
+    <div class="section">
+        <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer; float:right" >Show More</a>
+        <h2>Suggested for You </h2>
     <div class="card">
         <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
             <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
@@ -498,7 +499,6 @@
         </div>
     </div>
     <!-- <button class="btn btn-success" id="show-more-btn">Show More</button> -->
-    <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer;">Show More</a>
     <span class="second-row">
         <div class="card">
             <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
