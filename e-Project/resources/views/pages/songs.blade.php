@@ -284,11 +284,10 @@
             <img alt="Album cover" height="200" src="./src/open letter.jpg" width="200"/>
             <div class="title">Open Letter</div>
             <div class="description card-title">
-                        Faisal Kapadia, aleemrk and Talhah Anjum
+                Faisal Kapadia, aleemrk and Talhah Anjum
           </div>
         </div>
 </a>
-
     <div class="card">   
        <!-- 2nd Card Start -->
            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
