@@ -273,45 +273,30 @@
         </div>
     </div>
 </div>
-
-{{-- <div id="last_listen" class="last_listen">
-    <div class="container">
-        <h1>Your latest listening trends</h1>
-        <div class="ll_row">
-            <span >
-                <div class="ll_card">
-                    <span class="txt">
-                        <h5>MOST LISTENED ARTIST</h5>
-                        <h2>Taylor Swift</h2>
-                        <a href="Spotify-songs/songs.html">PLAY NOW</a>
-                    </span>
-                    <span class="img">
-                        <img src="./assets/b2.png" alt="">
-                    </span>
-                    <span class="bg_filt"></span>
-                </div>
-            </span>
-            <span >
-                <div class="ll_card">
-                    <span class="txt">
-                        <h5>Trending New</h5>
-                        <h2>Animal - Live</h2>
-                        <a href="Spotify-songs/songs.html">PLAY NOW</a>
-                    </span>
-                    <span class="img">
-                        <img src="./assets/b9.jpg" alt="">
-                    </span>
-                    <span class="bg_filt"></span>
-                </div>
-            </span>
+{{-- Modal Start --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body" style="color: black">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
-</div>  --}}
-
-<div class="section">
+  </div>
+  {{-- Modal End --}}
+  
+<div class="section" >
     <h2>To get you started</h2>
-    <a href="{{ url('/open-letter') }}">
-        <div class="card">
+    {{-- <a href="{{ url('/open-letter') }}"> --}}
+        <div class="card"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
                         <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
                     </svg>
@@ -321,7 +306,8 @@
                         Faisal Kapadia, aleemrk and Talhah Anjum
                     </div>
         </div>
-</a>
+{{-- </a> --}}
+
     <div class="card">   
        <!-- 2nd Card Start -->
            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
@@ -351,11 +337,11 @@
     </div>     <!-- 3rd Card End -->
    </div>
 
-
+ 
 <!-- Artists Section -->
     <h1 class="artist-h1">Popular Artists</h1>
         <marquee behavior="alternate" direction="" onmouseover="this.stop()" onmouseout="this.start()">
-    <div class="artists row" style="display: flex; width: 2000px;">
+    <div class="artists row" style="display: flex; width: 1800px;">
        <div class="card-1 artists" style="margin-right: 20px; width: 200px;" >
          <!-- 1st Card Start -->
               <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
@@ -581,7 +567,21 @@
 <!--Footer-->
 <custom-footer></custom-footer>
 <!--Footer-->
-
+<script> 
+    document.querySelectorAll('.card').forEach(card => {
+        card.style.cursor = 'pointer'; // Add pointer cursor
+        card.addEventListener('click', function() {
+            var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            modal.show();
+        });
+    });
+    
+    
+    
+    
+    
+    </script>
+    
 <div id="opacity" class="opacity"></div>
 <!-- <script src="./component/header.js"></script> -->
 <script src="/component/footer.js"></script>
