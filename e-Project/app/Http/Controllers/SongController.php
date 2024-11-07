@@ -10,6 +10,6 @@ class SongController extends Controller
         $song = Song::findOrFail($id);
         $moreSongs = $song->getMoreByArtist();
         
-        return view('pages.song-detail', compact('song', 'moreSongs'));
+        return view('pages.songs', compact('song', 'moreSongs'));
     }
 }

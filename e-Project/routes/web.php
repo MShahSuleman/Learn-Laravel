@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SongController;
-
+use App\Models\Song;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,4 +21,9 @@ Route::get('/about', function () {
 });
 
 // routes/web.php
-Route::get('/song/{id}', [SongController::class, 'show'])->name('song.show');
+Route::get('/song/{id}', [SongController::class, 'show'])->name('pages.songs');
+
+Route::get('/', function () {
+    $songs = Song::all(); // Fetch all songs from database
+    return view('welcome', compact('songs'));
+});
