@@ -287,7 +287,7 @@
                 Faisal Kapadia, aleemrk and Talhah Anjum
           </div>
         </div>
-</a>
+  </a>
     <div class="card">   
        <!-- 2nd Card Start -->
            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">

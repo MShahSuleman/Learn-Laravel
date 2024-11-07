@@ -159,7 +159,7 @@
         <video src="/src/index-songs/Open letter/Open-letter-video.mp4" height="250px" width="250px" id="videoPlayer" ></video>
         <div class="details">
           <h2>Open Letter</h2>
-          <p>Talha Anjum • 2020 • 1 song, 3 min 15 sec</p>
+          <p>Talha Anjum • 2024 • 1 song, 3 min 15 sec</p>
           <button class="play-button" id="headerPlayBtn" >▶</button>
       </div>
       </div>
