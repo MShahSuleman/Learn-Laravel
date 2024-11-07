@@ -150,7 +150,6 @@ body {
   }
 .container-fluid
 {
-  /* width: 80% !important; */
   margin-left: 32px;
   margin-right: 0px;
 }
@@ -391,7 +390,7 @@ html {
 
 .seekbar{
   height: 2px;
-  width: 100%;
+  width: 90%;
   border: 2px solid red;
 }
 #show-more-btn{
@@ -410,4 +409,11 @@ html {
 .second-row{
   display: none;
   transition: 2s;
+}
+.track-info {
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden !important; /* Hide overflowed text */
+  text-overflow: ellipsis !important; /* Add ellipsis when text overflows */
+  width: 160px !important; /* Adjust the width of the text container */
+  /* font-size: 10px; */
 }
