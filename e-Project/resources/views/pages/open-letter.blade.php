@@ -177,7 +177,7 @@
             <tr>
               <td>1</td>
               <td>
-                <p>Titliaan</p>
+                <p>Open Letter</p>
                 <p>Talha Anjum, Harrdy Sandhu, Sargun Mehta</p>
               </td>
               <td></td>

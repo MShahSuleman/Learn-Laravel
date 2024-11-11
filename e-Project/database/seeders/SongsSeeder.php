@@ -13,11 +13,21 @@ class SongsSeeder extends Seeder
             'artist' => 'Talha Anjum',
             'duration' => '3:15',
             'year' => '2024',
-            'image_path' => 'src/open letter.jpg',
-            'video_path' => 'src/index-songs/Open letter/Open-letter-video.mp4',
-            'artist_id' => 'talha_anjum'
+            'image_path' => 'src/open_letter.jpg',
+            'video_path' => 'src/index-songs/Open_letter/Open-letter-video.mp4',
+            'description' => 'This is a description for Open Letter.',
         ]);
 
-        // Add more songs...
+        Song::create([
+            'title' => 'Lajawab',
+            'artist' => 'Rafey Anwer',
+            'duration' => '4:00',
+            'year' => '2023',
+            'image_path' => 'src/lajawab.jpg',
+            'video_path' => 'src/index-songs/Lajawab/Lajawab-video.mp4',
+            'description' => 'This is a description for Lajawab.',
+        ]);
+
+        // Add more songs as needed...
     }
 }

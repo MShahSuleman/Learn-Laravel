@@ -417,3 +417,6 @@ html {
   width: 160px !important; /* Adjust the width of the text container */
   /* font-size: 10px; */
 }
+.artists:hover{
+  cursor: pointer;
+}

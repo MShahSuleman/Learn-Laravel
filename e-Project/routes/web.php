@@ -21,7 +21,7 @@ Route::get('/about', function () {
 });
 
 // routes/web.php
-Route::get('/song/{id}', [SongController::class, 'show'])->name('pages.songs');
+Route::get('/song/{id}', [SongController::class, 'show'])->name('song.show');
 
 Route::get('/', function () {
     $songs = Song::all(); // Fetch all songs from database

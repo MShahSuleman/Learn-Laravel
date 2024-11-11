@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/css/fonts.css" />
 <link rel="stylesheet" href="/css/animation.css">
 <link rel="stylesheet" href="/css/responsive.css">
-<link rel="shortcut icon" href="/src/logo" type="image/x-icon">
+<link rel="shortcut icon" href="/src/logo.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"rel="stylesheet"/>
 <title>Sound Group</title>
 </head>
@@ -284,8 +284,9 @@
                <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
          </svg>
            <img alt="Album cover of Atif Aslam Mix" height="200" src="./src/lajawab 2.jpg" width="200"/>
-               <div class="title">
-                {{ $song->title }}
+           {{ $song->title }}
+           <div class="title">
+           Lajwab 
                </div>
                <div class="description card-title">
                 {{ $song->artist }}
@@ -310,7 +311,7 @@
 
  
 <!-- Artists Section -->
-    <h1 class="artist-h1">Popular Artists</h1>
+    <h2 class="artist-h1">Popular Artists</h2>
         <marquee behavior="alternate" direction="" onmouseover="this.stop()" onmouseout="this.start()">
     <div class="artists row" style="display: flex; width: 1800px;">
        <div class="card-1 artists" style="margin-right: 20px; width: 200px;" >
