@@ -15,7 +15,7 @@ class SongsSeeder extends Seeder
             'year' => '2024',
             'image_path' => 'src/open_letter.jpg',
             'video_path' => 'src/index-songs/Open_letter/Open-letter-video.mp4',
-            'description' => 'This is a description for Open Letter.',
+            'description' => 'This is a description for Open Letter.'
         ]);
 
         Song::create([
