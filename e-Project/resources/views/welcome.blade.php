@@ -279,22 +279,22 @@
 @foreach($songs as $song)
 <a href="{{ route('song.show', $song->id) }}">
     <div class="card">   
-       <!-- 2nd Card Start -->
-           <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-               <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-         </svg>
-           <img alt="Album cover of Atif Aslam Mix" height="200" src="./src/lajawab 2.jpg" width="200"/>
-           {{ $song->title }}
-           <div class="title">
-           Lajwab 
-               </div>
-               <div class="description card-title">
-                {{ $song->artist }}
-               </div>
-         </div>     <!-- 2nd Card End -->
-        </a>
-        @endforeach
-    <div class="card"> 
+        <!-- Card Content Start -->
+        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
+            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
+        </svg>
+        <img alt="Album cover of {{ $song->title }}" height="200" src="{{$song->image_path}}" width="200"/>
+        <div class="title">
+            {{ $song->title }}
+        </div>
+        <div class="description card-title">
+            {{ $song->artist }}
+        </div>
+        <!-- Card Content End -->
+    </div>
+</a>
+@endforeach
+    {{-- <div class="card"> 
        <!-- 3rd Card Start -->
        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
@@ -307,7 +307,7 @@
       Yo Yo Honey Singh, Bhushan Kumar
      </div>
     </div>     <!-- 3rd Card End -->
-   </div>
+   </div> --}}
 
  
 <!-- Artists Section -->

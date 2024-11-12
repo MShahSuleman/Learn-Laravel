@@ -20,7 +20,7 @@ class Song extends Model
     // Get more songs by the same artist
     public function getMoreByArtist()
     {
-        return Song::where('artist_id', $this->artist_id)
+        return Song::where('id', $this->artist_id)
                   ->where('id', '!=', $this->id)
                   ->take(4)
                   ->get();
