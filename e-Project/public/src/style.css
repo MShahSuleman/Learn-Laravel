@@ -336,9 +336,8 @@ html {
   color: black;
   border-radius: 17px;
  }
- .login-btn:hover{
-  border-radius: 7px;
-  transition: 1s;
+ #login:hover{
+  color: #1db954;
  }
 
 .card-1 {

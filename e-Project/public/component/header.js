@@ -30,7 +30,6 @@ class Header extends HTMLElement{
                             <button class="profile_btn" type="button" onclick="profile()">
                                 <div class="profile-title">
                                     <a href="/login"><span id="login">Login/SignUp</span></a> 
-                                   
                                 </div>
                             </button>
                         </li>
