@@ -30,7 +30,7 @@
     <link rel="icon" href="https://www.scdn.co/i/_global/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <title>Open Letter</title>
+    <title>{{$song->title}}</title>
   </head>
   <body>
     <custom-header></custom-header>
