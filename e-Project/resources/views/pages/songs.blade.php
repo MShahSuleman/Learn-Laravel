@@ -153,14 +153,13 @@
 
   <div class="footer">
     <div class="current-track">
-      @foreach($moreSongs as $moreSong)
       <img
       alt="Current track cover"
       height="50"
-      src="{{ asset($moreSong->image_path) }}"
+      src="{{$song->image_path}}"
       width="50"
-  /> @endforeach
-        <div class="track-info">
+  /> 
+          <div class="track-info">
             <p>{{$song->title}}</p>
             <p>{{$song->artist}}</p>
         </div>
@@ -176,7 +175,7 @@
         <div class="seekbar-container">
             <span class="current-time">0:00</span>
             <input type="range" id="seekbar" value="0" min="0" max="150" step="1" />
-            <span class="duration">0:00</span>
+            <span class="duration">{{ $song->duration }}</span>
         </div>
     </div>
 
