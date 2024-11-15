@@ -19,7 +19,7 @@ class SongsSeeder extends Seeder
 
         Song::create([
             'title' => 'Millionare',
-            'artist' => 'Honety Singh',
+            'artist' => 'Honey Singh',
             'duration' => '2:00',
             'year' => '2023',
             'image_path' => '/images/millionare.jpg',  // Update image path

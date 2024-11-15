@@ -70,7 +70,7 @@
       </div>
       <div class="more-by-artist">
         <h3>More by {{ $song->artist }}</h3>
-        @foreach($moreSongs as $moreSong)
+        {{-- @foreach($moreSongs as $moreSong)
         <div class="card" data-video-src="{{ asset('/src/index-songs/lajawab-2/Lajawab-2.mp4') }}" data-song-img="/src/lajawab-2/Lajawab 2.jpg" data-song-title="Lajawab 2" data-song-artist="Rafey Anwer and Taimoor Baig">   
           First card start
           <a href="{{ route('song.show', $moreSong->id)}}">
@@ -85,15 +85,16 @@
             {{ $moreSong->artist }}
           </div>
         </a>
-        @endforeach
       </div> 
+        @endforeach --}}
+
       {{-- First card end  --}}
-      <div class="card" data-video-src="{{ asset('/src/index-songs/lajawab-2/Lajawab-2.mp4') }}" data-song-img="/src/lajawab-2/Lajawab 2.jpg" data-song-title="Lajawab 2" data-song-artist="Rafey Anwer and Taimoor Baig">   
+      <div class="card" data-video-src="{{ asset('/src/index-songs/Lajawab 2/Lajawab-2.mp4') }}" data-song-img="/src/lajawab-2/Lajawab 2.jpg" data-song-title="Lajawab 2" data-song-artist="Rafey Anwer and Taimoor Baig">   
         {{-- First card start --}}
         <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
             <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
         </svg>
-        <img alt="Album cover of Atif Aslam Mix" height="200" src="./src/lajawab 2.jpg" width="200"/>
+        <img alt="Album cover of Atif Aslam Mix" height="200" src="/src/index-songs/Lajawab 2/Lajawab-2.jpg" width="200"/>
         <div class="title">
             Lajawab 2
         </div>
@@ -102,26 +103,26 @@
         </div>
     </div> 
     {{-- First card end  --}}
-     <div class="card" data-video-src="{{asset('src/index-songs/Millionare/Millionare.mp4')}}" data-song-img="./src/millionare.jpg" data-song-title="Millionare" data-song-artist="Yo Yo Honey Singh, Bhushan Kumar"> 
+     <div class="card" data-video-src="{{asset('/src/index-songs/Shikayat/shikayat.mp4')}}" data-song-img="./src/millionare.jpg" data-song-title="Millionare" data-song-artist="Yo Yo Honey Singh, Bhushan Kumar"> 
         <!-- 2nd Card Start -->
         <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
             <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
           </svg>
-      <img alt="Album cover of Atif Aslam Mix" height="200" src="./src/millionare.jpg" width="200"/>
+      <img alt="Album cover of Atif Aslam Mix" height="200" src="/src/index-songs/Shikayat/shikayat.jpg" width="200"/>
       <div class="title">
-       Millionare
+       Shikayat
       </div>
       <div class="description card-title">
-       Yo Yo Honey Singh, Bhushan Kumar
+       AUR, Usama, Ahad
       </div>
      </div>     <!-- 2nd Card End -->
 
      {{-- 3rd Card start --}}
-     <div class="card" data-video-src="{{asset('src/index-songs/kaun-talha/kaun-talha.mp4')}}" data-song-img="./src/index-songs/kaun talha" data-song-title="Kaun Talha" data-song-artist="Talha Anjum Prod. by Umair">
+     <div class="card" data-video-src="{{asset('/src/index-songs/kaun-talha/kaun-talha.mp4')}}" data-song-img="./src/index-songs/kaun talha" data-song-title="Kaun Talha" data-song-artist="Talha Anjum Prod. by Umair">
       <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
           <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
       </svg>
-      <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/kaun talha.png" width="200"/>
+      <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="/src/index-songs/kaun-talha/kaun talha.png" width="200"/>
       <div class="title">
           Kaun Talha
       </div>
@@ -131,12 +132,12 @@
   </div>
   {{--3rd Card End --}}
   
-  <div class="card" data-video-src="{{asset('src/index-songs/Jo-tum-mery-ho/Jo-tum-mery-ho.mp4')}}" data-song-img="./src/index-songs/kaun talha" data-song-title="Kaun Talha" data-song-artist="Talha Anjum Prod. by Umair">
+  <div class="card" data-video-src="{{asset('/src/index-songs/Jo-tum-mery-ho/Jo-tum-mery-ho.mp4')}}" data-song-img="./src/index-songs/kaun talha" data-song-title="Kaun Talha" data-song-artist="Talha Anjum Prod. by Umair">
     {{-- 4th Card start --}}
       <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
           <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
       </svg>
-   <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/Jo tum mery ho.png" width="200"/>
+   <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="/src/index-songs/Jo-tum-mery-ho/Jo tum mery ho.png" width="200"/>
    <div class="title">
        Jo Tum Mery Ho
       </div>
@@ -147,6 +148,9 @@
     </div>
 {{-- 4th card end  --}}
   </div>
+
+
+
   <div class="footer">
     <div class="current-track">
       @foreach($moreSongs as $moreSong)
