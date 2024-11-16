@@ -45,6 +45,7 @@ Route::view('/addUser', 'person.form')->name('add');
 
 Route::get('/edit/{id}', [personController::class, 'editPerson'])->name('edit');
 
-Route::get('/update', [personController::class, 'updatePerson'])->name('update');
+// Route::get('/update', [personController::class, 'updatePerson'])->name('update');
+Route::post('/update', [personController::class, 'updateSong'])->name('update');
 
 Route::get('delete/{id}', [personController::class, 'deletePerson'])->name('delete');

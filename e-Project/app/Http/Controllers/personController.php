@@ -75,33 +75,34 @@ class personController extends Controller
     }
 
     public function updateSong(Request $req)
-    {
-        $req->validate([
-            'title' => 'required|max:255',
-            'artist' => 'required|max:255',
-            'duration' => 'required|max:255',
-            'year' => 'required|numeric|digits:4',
-            'image_path' => 'required|url',
-            'video_path' => 'required|url',
-        ]);
-        
-        $updateSong = DB::table('songs')->where('id', $req->id)->update(
-            [
-                'title' => $req->title,
-                'artist' => $req->artist,
-                'duration' => $req->duration,
-                'year' => $req->year,
-                'image_path' => $req->image_path,
-                'video_path' => $req->video_path
-            ]
-        );
+{
+    // Validate the incoming request data
+    $req->validate([
+        'title' => 'required|max:255',
+        'artist' => 'required|max:255',
+        'duration' => 'required|max:255',
+        'year' => 'required|integer|digits:4',
+        'image_path' => 'required|url',
+        'video_path' => 'required|url',
+    ]);
+    
+    // Update the song in the database
+    $updateSong = DB::table('songs')->where('id', $req->id)->update([
+        'title' => $req->title,
+        'artist' => $req->artist,
+        'duration' => $req->duration,
+        'year' => $req->year,
+        'image_path' => $req->image_path,
+        'video_path' => $req->video_path,
+        'updated_at' => now() // Optional: update the timestamp
+    ]);
 
-        if ($updateSong) {
-            return redirect()->route('songs');
-        } else {
-            return 'Error';
-        }
+    if ($updateSong) {
+        return redirect()->route('home')->with('success', 'Song updated successfully!');
+    } else {
+        return redirect()->back()->with('error', 'Error updating song.');
     }
+}
 
     public function deletePerson(String $id)
     {
