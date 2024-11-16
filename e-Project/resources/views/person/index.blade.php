@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-8">
                 <h2 class="text-center">Songs</h2>
                 <a href={{ Route('add') }}>
@@ -13,7 +13,6 @@
                         <th>S.No</th>
                         <th>Title</th>
                         <th>Artist</th>
-                        {{-- <th>Release Date</th> --}}
                         <th>Duration</th>
                         <th>Year</th>
                         <th>Image Path</th>

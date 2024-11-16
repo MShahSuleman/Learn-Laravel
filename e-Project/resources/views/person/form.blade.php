@@ -18,20 +18,20 @@
                     </div>
                     <div class="mb-3">
                         <label for="mobile" class="form-label">Duration: </label>
-                        <input type="number" class="form-control" id="mobile" placeholder="Duration" name="mobile">
+                        <input type="text" class="form-control" id="mobile" placeholder="Duration" name="mobile">
                     </div>
                     <div class="mb-3">
                         <label for="age" class="form-label">Year: </label>
                         <input type="number" class="form-control" id="age" placeholder="22" name="age">
                     </div>
-                    {{-- <div class="mb-3">
+                    <div class="mb-3">
                         <label for="image" class="form-label">Image: </label>
                         <input type="text" class="form-control" id="image" name="file" placeholder="Enter Image URL here">
                     </div>
                     <div class="mb-3">
                         <label for="salary" class="form-label">Video: </label>
                         <input type="text" class="form-control" id="salary" placeholder="Enter Video URL here" name="salary">
-                    </div> --}}
+                    </div>
                     <div class="mb-3">
                         <input type="submit" value="Save" class="btn btn-outline-success">
                     </div>

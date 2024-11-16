@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Traits\Timestamp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -10,30 +11,20 @@ class personController extends Controller
     public function showPerson()
     {
         $personData =  DB::table('songs')->get();
+        // return $personData;
         return view('person.index', ["data" => $personData]);
-    }
-
-    public function showSongs()
-    {
-        $songsData =  DB::table('songs')->get();
-        return view('person.songs', ["data" => $songsData]);
     }
 
     public function savePerson(Request $req)
     {
-        // Your existing code for saving person data
-    }
-
-    public function saveSong(Request $req)
-    {
-        $req->validate([
-            'title' => 'required|max:255',
-            'artist' => 'required|max:255',
-            'duration' => 'required|max:255',
-            'year' => 'required|numeric|digits:4',
-            'image_path' => 'required|url',
-            'video_path' => 'required|url',
-        ]);
+        // $req->validate([
+        //     'title' => 'required|max:255',
+        //     'artist' => 'required|max:255',
+        //     'duration' => 'required|max:255',
+        //     'year' => 'required|numeric|digits:4',
+        //     'image_path' => 'required|url',
+        //     'video_path' => 'required|url',
+        // ]);
 
         $song = DB::table('songs')->insert(
             [
@@ -49,7 +40,8 @@ class personController extends Controller
         );
 
         if ($song) {
-            return redirect()->route('songs');
+            // return 'Data Saved';
+            return redirect()->route('home');
         } else {
             return 'Error';
         }
@@ -63,59 +55,42 @@ class personController extends Controller
         return view('person.editUser', ["data" => $singlePerson]);
     }
 
-    public function editSong(Request $req)
-    {
-        $singleSong = DB::table('songs')->where('id', $req->id)->get();
-        return view('person.editSong', ["data" => $singleSong]);
-    }
-
     public function updatePerson(Request $req)
     {
-        // Your existing code for updating person data
-    }
+        // $req->validate([
+        //     'title' => 'required|max:255',
+        //     'artist' => 'required|max:255',
+        //     'duration' => 'required|max:255',
+        //     'year' => 'required|integer|digits:4',
+        //     'image_path' => 'required|url',
+        //     'video_path' => 'required|url',
+        // ]);
+        $updateSong = DB::table('songs')->where('id', $req->id)->update([
+            'title' => $req->title,
+            'artist' => $req->artist,
+            'duration' => $req->duration,
+            'year' => $req->year,
+            'image_path' => $req->image_path,
+            'video_path' => $req->video_path,
+            'updated_at' => now() 
+        ]);
 
-    public function updateSong(Request $req)
-{
-    // Validate the incoming request data
-    $req->validate([
-        'title' => 'required|max:255',
-        'artist' => 'required|max:255',
-        'duration' => 'required|max:255',
-        'year' => 'required|integer|digits:4',
-        'image_path' => 'required|url',
-        'video_path' => 'required|url',
-    ]);
-    
-    // Update the song in the database
-    $updateSong = DB::table('songs')->where('id', $req->id)->update([
-        'title' => $req->title,
-        'artist' => $req->artist,
-        'duration' => $req->duration,
-        'year' => $req->year,
-        'image_path' => $req->image_path,
-        'video_path' => $req->video_path,
-        'updated_at' => now() // Optional: update the timestamp
-    ]);
-
-    if ($updateSong) {
-        return redirect()->route('home')->with('success', 'Song updated successfully!');
-    } else {
-        return redirect()->back()->with('error', 'Error updating song.');
+        if ($updateSong) {
+            return redirect()->route('home')->with('success', 'Song updated successfully!');
+        } else {
+            return redirect()->back()->with('error', 'Error updating song.');
+        }
     }
-}
 
     public function deletePerson(String $id)
     {
-        // Your existing code for deleting person data
-    }
-
-    public function deleteSong(String $id)
-    {
         $delete  = DB::table('songs')->where('id', $id)->delete();
+        // return $id;
+
         if ($delete) {
-            return redirect()->route('songs');
+            return redirect()->route('home');
         } else {
-            return 'An Error Occured';
+            return 'An Error Occurd';
         }
     }
 }
