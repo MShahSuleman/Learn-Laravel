@@ -30,8 +30,9 @@
                                 <td>{{ $songs->artist }}</td>
                                 <td>{{ $songs->duration }}</td>
                                 <td>{{ $songs->year }}</td>
+                                <td>{{ $songs->image_path }}</td>
                                 <td>{{ $songs->video_path }}</td>
-                                <td>{{ $songs->created_at }}</td>
+                                <td>{{ $songs->updated_at }}</td>
                                 <td>{{ $songs->updated_at }}</td>
                                 <td class="d-flex">
                                     <a href="" class="btn btn-outline-primary"> View </a>&nbsp;

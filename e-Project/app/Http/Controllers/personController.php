@@ -9,7 +9,7 @@ class personController extends Controller
 {
     public function showPerson()
     {
-        $personData =  DB::table('persons')->get();
+        $personData =  DB::table('songs')->get();
         return view('person.index', ["data" => $personData]);
     }
 
@@ -57,7 +57,10 @@ class personController extends Controller
 
     public function editPerson(Request $req)
     {
-        // Your existing code for editing person data
+        $singlePerson = DB::table('songs')->where('id', $req->id)->get();
+
+        // return $singlePerson;
+        return view('person.editUser', ["data" => $singlePerson]);
     }
 
     public function editSong(Request $req)
@@ -73,6 +76,15 @@ class personController extends Controller
 
     public function updateSong(Request $req)
     {
+        $req->validate([
+            'title' => 'required|max:255',
+            'artist' => 'required|max:255',
+            'duration' => 'required|max:255',
+            'year' => 'required|numeric|digits:4',
+            'image_path' => 'required|url',
+            'video_path' => 'required|url',
+        ]);
+        
         $updateSong = DB::table('songs')->where('id', $req->id)->update(
             [
                 'title' => $req->title,

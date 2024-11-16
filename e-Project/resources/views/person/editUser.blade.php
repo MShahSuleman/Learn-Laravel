@@ -10,35 +10,44 @@
                     @csrf
                     <input type="text" name="id" value="{{ $data[0]->id }}" hidden>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Name: </label>
-                        <input type="text" value="{{ $data[0]->name }}" class="form-control" id="name"
-                            placeholder="John Doe" name="name">
+                        <label for="id" class="form-label">Id: </label>
+                        <input type="number" value="{{ $data[0]->id }}" class="form-control" id="id"
+                            placeholder="Id" name="id" readonly>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email: </label>
-                        <input type="email" class="form-control" value="{{ $data[0]->email }}" id="email"
-                            placeholder="abc@gmail.com" name="email">
+                        <label for="title" class="form-label">Title: </label>
+                        <input type="text" class="form-control" value="{{ $data[0]->title }}" id="title"
+                            placeholder="Title of Song" name="title" required>
                     </div>
                     <div class="mb-3">
-                        <label for="mobile" class="form-label">Mobile: </label>
-                        <input type="number" class="form-control" value="{{ $data[0]->mobile }}" id="mobile"
-                            placeholder="021-23598989" name="mobile">
+                        <label for="artist" class="form-label">Artist: </label>
+                        <input type="text" class="form-control" value="{{ $data[0]->artist }}" id="artist"
+                            placeholder="Artist Name" name="artist" required>
                     </div>
                     <div class="mb-3">
-                        <label for="age" class="form-label">Age: </label>
-                        <input type="number" class="form-control" value="{{ $data[0]->age }}" id="age"
-                            placeholder="22" name="age">
+                        <label for="duration" class="form-label">Duration: </label>
+                        <input type="number" class="form-control" value="{{ $data[0]->duration }}" id="duration"
+                            placeholder="Duration (in minutes)" name="duration" required>
                     </div>
                     <div class="mb-3">
-                        <label for="salary" class="form-label">Salary: </label>
-                        <input type="number" class="form-control" value="{{ $data[0]->salary }}" id="salary"
-                            placeholder="25000" name="salary">
+                        <label for="year" class="form-label">Year: </label>
+                        <input type="number" class="form-control" value="{{ $data[0]->year }}" id="year"
+                            placeholder="Year" name="year" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image_path" class="form-label">Image Path: </label>
+                        <input type="text" class="form-control" value="{{ $data[0]->image_path }}" id="image_path"
+                            placeholder="Enter Image URL" name="image_path" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="video_path" class="form-label">Video Path: </label>
+                        <input type="text" class="form-control" value="{{ $data[0]->video_path }}" id="video_path"
+                            placeholder="Enter Video URL" name="video_path" required>
                     </div>
                     <div class="mb-3">
                         <input type="submit" value="Save" class="btn btn-outline-success">
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
