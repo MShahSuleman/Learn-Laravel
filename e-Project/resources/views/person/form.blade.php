@@ -5,38 +5,36 @@
         <div class="row justify-content-center">
             <div class="col-8">
                 <h2 class="text-center">Add Users</h2>
-                <form action={{ Route('save') }} method="POST" enctype="multipart/form-data">
+                <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Title:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Title" name="name" required>
+                        <label for="title" class="form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" placeholder="Title" name="title" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Artist: </label>
-                        <input type="text" class="form-control" id="email" placeholder="Artist Name"
-                            name="email">
+                        <label for="artist" class="form-label">Artist: </label>
+                        <input type="text" class="form-control" id="artist" placeholder="Artist Name" name="artist" required>
                     </div>
                     <div class="mb-3">
-                        <label for="mobile" class="form-label">Duration: </label>
-                        <input type="text" class="form-control" id="mobile" placeholder="Duration" name="mobile">
+                        <label for="duration" class="form-label">Duration: </label>
+                        <input type="text" class="form-control" id="duration" placeholder="Duration" name="duration" required>
                     </div>
                     <div class="mb-3">
-                        <label for="age" class="form-label">Year: </label>
-                        <input type="number" class="form-control" id="age" placeholder="22" name="age">
+                        <label for="year" class="form-label">Year: </label>
+                        <input type="number" class="form-control" id="year" placeholder="22" name="year" required>
                     </div>
                     <div class="mb-3">
-                        <label for="image" class="form-label">Image: </label>
-                        <input type="text" class="form-control" id="image" name="file" placeholder="Enter Image URL here">
+                        <label for="image_path" class="form-label">Image Path: </label>
+                        <input type="text" class="form-control" id="image_path" name="image_path" placeholder="Enter Image URL here" required>
                     </div>
                     <div class="mb-3">
-                        <label for="salary" class="form-label">Video: </label>
-                        <input type="text" class="form-control" id="salary" placeholder="Enter Video URL here" name="salary">
+                        <label for="video_path" class="form-label">Video Path: </label>
+                        <input type="text" class="form-control" id="video_path" placeholder="Enter Video URL here" name="video_path" required>
                     </div>
                     <div class="mb-3">
                         <input type="submit" value="Save" class="btn btn-outline-success">
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
