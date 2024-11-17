@@ -9,7 +9,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Title:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Title" name="name">
+                        <input type="text" class="form-control" id="name" placeholder="Title" name="name" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Artist: </label>
