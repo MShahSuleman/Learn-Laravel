@@ -264,7 +264,7 @@
   
 <div class="section" >
     <h2>To get you started</h2>
-    <a href="{{ url('/open-letter') }}">
+    {{-- <a href="{{ url('/open-letter') }}">
         <div class="card">
                     <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
                         <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
@@ -274,9 +274,9 @@
                     <div class="description card-title">
                         Faisal Kapadia, aleemrk and Talhah Anjum
                     </div>
-        </div>
+        </div> --}}
 </a>
-@foreach($songs as $song)
+{{-- @foreach($songs as $song)
 <a href="{{ route('song.show', $song->id) }}">
     <div class="card">   
         <!-- Card Content Start -->
@@ -295,7 +295,19 @@
     </div>
     
 </a>
-@endforeach
+@endforeach --}}
+@foreach($songs->take(3) as $song) <!-- Display only the first 3 songs -->
+        <a href="{{ route('song.show', $song->id) }}">
+            <div class="card">   
+                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
+                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
+                </svg>
+                <img alt="Album cover of {{ $song->title }}" height="200" src="{{$song->image_path}}" width="200"/>
+                <div class="title">{{ $song->title }}</div>
+                <div class="description card-title">{{ $song->artist }}</div>
+            </div>
+        </a>
+    @endforeach
 
 <!-- Artists Section -->
     <h2 class="artist-h1">Popular Artists</h2>
@@ -382,24 +394,38 @@
         <!-- 8th Card Start -->
           <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
             <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-          </svg>
-          <img alt="Album cover of Open Letter by Talha Anjum" height="200" src="./src/Artists/Rahat Fateh ali khan.jpg" width="200"/>
+        </svg>
+        <img alt="Album cover of Open Letter by Talha Anjum" height="200" src="./src/Artists/Rahat Fateh ali khan.jpg" width="200"/>
           <div class="title">
               Rahat Fateh Ali Khan
-              
             </div>
         </div>   <!-- 8th Card End -->
     </marquee>
+    
     <!-- Artists End -->
-    
-    
     <!-- Cards Start -->
     <div class="section">
-        <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer; float:right" >Show More</a>
+        <h2>Suggested for You</h2>
+    <div class="card-row">
+        @foreach($songs->slice(3) as $song) <!-- Display songs starting from the 4th index -->
+        <a href="{{ route('song.show', $song->id) }}">
+            <div class="card">
+                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
+                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
+                </svg>
+                <img alt="Album cover of {{ $song->title }}" height="200" src="{{$song->image_path}}" width="200"/>
+                <div class="title">{{ $song->title }}</div>
+                <div class="description card-title">{{ $song->artist }}</div>
+            </div>
+        </a>
+        @endforeach
+    </div>
+
+        {{-- <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer; float:right" >Show More</a>
         <h2>Suggested for You </h2>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
+        <div class="card">
+            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
+                <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
         </svg>
         <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/kaun talha.png" width="200"/>
         <div class="title">
@@ -519,7 +545,7 @@
            Rafey Anwer and Taimoor Baig 
         </div>
     </div>
-</span>
+</span> --}}
    </div>
    
 

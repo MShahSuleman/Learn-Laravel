@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-8">
-                <h2 class="text-center">Add Users</h2>
+                <h2 class="text-center">Add Song</h2>
                 <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
