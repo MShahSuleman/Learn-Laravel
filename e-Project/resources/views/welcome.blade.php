@@ -407,7 +407,7 @@
     <div class="section">
         <h2>Suggested for You</h2>
     <div class="card-row">
-        @foreach($songs->slice(3) as $song) <!-- Display songs starting from the 4th index -->
+        @foreach($songs->slice(3) as $song) 
         <a href="{{ route('song.show', $song->id) }}">
             <div class="card">
                 <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
