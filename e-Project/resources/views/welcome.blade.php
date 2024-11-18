@@ -260,9 +260,10 @@
   </div>
   {{-- Modal End --}}
   
-<div class="section" id="last_listen">
+
+  <div class="section" id="last_listen">
     <h2>To get you started</h2>
-@foreach($songs->take(3) as $song) <!-- Display only the first 3 songs -->
+@foreach($songs->take(3) as $song) 
         <a href="{{ route('song.show', $song->id) }}">
             <div class="card">   
                 <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">

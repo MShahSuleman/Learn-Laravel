@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SongController;
 use App\Models\Song;
 use App\Http\Controllers\personController;
+use App\Http\Controllers\usersController;
 
 Route::get('/open-letter', function () {
     return view('pages.open-letter');
@@ -34,9 +35,9 @@ Route::post('/update', [PersonController::class, 'updatePerson'])->name('update'
 Route::get('/delete/{id}', [PersonController::class, 'deletePerson'])->name('delete');
 
 
-// Route::get('/users', [loginController::class, 'showuser'])->name('home');
-// Route::post('/saveUser', [loginController::class, 'saveUser'])->name('save');
-// Route::view('/addUser', 'login.form')->name('add');
-// Route::get('/edit/{id}', [loginController::class, 'editUser'])->name('edit');
-// Route::post('/update', [loginController::class, 'updateUser'])->name('update');
-// Route::get('/delete/{id}', [loginController::class, 'deleteUser'])->name('delete');
+Route::get('/users', [usersController::class, 'showuser'])->name('home');
+Route::post('/saveUser', [usersController::class, 'saveUser'])->name('save');
+Route::view('/addUser', 'login.form')->name('add');
+Route::get('/edit/{id}', [usersController::class, 'editUser'])->name('edit');
+Route::post('/update', [usersController::class, 'updateUser'])->name('update');
+Route::get('/delete/{id}', [usersController::class, 'deleteUser'])->name('delete');

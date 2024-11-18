@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-8">
-                <h2 class="text-center">Songs</h2>
+                <h2 class="text-center">Users</h2>
                 <a href={{ Route('add') }}>
-                    <button class="btn btn-outline-primary">Add Song</button>
+                    <button class="btn btn-outline-primary">Add User</button>
                 </a>
                 <table class="table mt-3">
                     <thead>
@@ -25,11 +25,11 @@
                                 <td>{{ $users->reenterpassword }}</td>
                                 <td class="d-flex">
                                     <a href="" class="btn btn-outline-primary"> View </a>&nbsp;
-                                    <a href={{ Route('edit', $songs->id) }} class="btn btn-outline-success">
+                                    <a href={{ Route('edit', $users->id) }} class="btn btn-outline-success">
                                         Edit
                                     </a>
                                     &nbsp;
-                                    <a href={{ Route('delete', $songs->id) }} class="btn btn-outline-danger">Delete</a>
+                                    <a href={{ Route('delete', $users->id) }} class="btn btn-outline-danger">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

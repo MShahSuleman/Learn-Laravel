@@ -1,4 +1,4 @@
-@extends('person.main')
+@extends('login.main')
 
 @section('content')
     <div class="container">
@@ -8,28 +8,20 @@
                 <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="title" class="form-label">Title:</label>
-                        <input type="text" class="form-control" id="title" placeholder="Title" name="title" required>
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Username" name="username" required>
                     </div>
                     <div class="mb-3">
-                        <label for="artist" class="form-label">Artist: </label>
-                        <input type="text" class="form-control" id="artist" placeholder="Artist Name" name="artist" required>
+                        <label for="email" class="form-label">Email: </label>
+                        <input type="email" class="form-control" id="email" placeholder="email" name="email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="duration" class="form-label">Duration: </label>
-                        <input type="text" class="form-control" id="duration" placeholder="Duration" name="duration" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="year" class="form-label">Year: </label>
-                        <input type="number" class="form-control" id="year" placeholder="22" name="year" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="image_path" class="form-label">Image Path: </label>
-                        <input type="text" class="form-control" id="image_path" name="image_path" placeholder="Enter Image URL here" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="video_path" class="form-label">Video Path: </label>
+                        <label for="password" class="form-label">Video Path: </label>
                         <input type="text" class="form-control" id="video_path" placeholder="Enter Video URL here" name="video_path" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="re_enter_password" class="form-label">Re Enter Password: </label>
+                        <input type="password" class="form-control" id="re_enter_password" placeholder="Re Enter Your Password" name="video_path" required>
                     </div>
                     <div class="mb-3">
                         <input type="submit" value="Save" class="btn btn-outline-success">

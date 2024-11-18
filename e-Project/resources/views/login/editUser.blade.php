@@ -1,4 +1,4 @@
-@extends('person.main')
+@extends('login.main')
 
 @section('content')
     <div class="container">
@@ -9,28 +9,20 @@
                     @csrf
                     <input type="hidden" name="id" value="{{ $data[0]->id }}">
                     <div class="mb-3">
-                        <label for="title" class="form-label">Title: </label>
-                        <input type="text" class="form-control" value="{{ $data[0]->title }}" id="title" name="title" required>
+                        <label for="name" class="form-label">Name: </label>
+                        <input type="text" class="form-control" value="{{ $data[0]->name }}" id="title" name="title" required>
                     </div>
                     <div class="mb-3">
-                        <label for="artist" class="form-label">Artist: </label>
-                        <input type="text" class="form-control" value="{{ $data[0]->artist }}" id="artist" name="artist" required>
+                        <label for="email" class="form-label">Email: </label>
+                        <input type="email" class="form-control" value="{{ $data[0]->email }}" id="artist" name="artist" required>
                     </div>
                     <div class="mb-3">
-                        <label for="duration" class="form-label">Duration: </label>
-                        <input type="text" class="form-control" value="{{ $data[0]->duration }}" id="duration" name="duration" required>
+                        <label for="password" class="form-label">Password: </label>
+                        <input type="password" class="form-control" value="{{ $data[0]->password }}" id="year" name="year" required>
                     </div>
                     <div class="mb-3">
-                        <label for="year" class="form-label">Year: </label>
-                        <input type="number" class="form-control" value="{{ $data[0]->year }}" id="year" name="year" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="image_path" class="form-label">Image Path: </label>
-                        <input type="text" class="form-control" value="{{ $data[0]->image_path }}" id="image_path" name="image_path" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="video_path" class="form-label">Video Path: </label>
-                        <input type="text" class="form-control" value="{{ $data[0]->video_path }}" id="video_path" name="video_path" required>
+                        <label for="re_enter_password" class="form-label">re_enter_password: </label>
+                        <input type="text" class="form-control" value="{{ $data[0]->re_enter_password }}" id="video_path" name="video_path" required>
                     </div>
                     <div class="mb-3">
                         <input type="submit" value="Save" class="btn btn-outline-success">
