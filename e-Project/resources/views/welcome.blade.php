@@ -386,7 +386,7 @@
         </a>
         @endforeach
     </div>
-    <button class="btn btn-success more">No More Songs found...</button>
+    <button class="btn btn-success" id="more">No More Songs found...</button>
    </div>
    
 
