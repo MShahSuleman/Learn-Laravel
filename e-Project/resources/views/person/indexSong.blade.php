@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-8">
                 <h2 class="text-center">Songs</h2>
-                <a href={{ Route('add') }}>
+                <a href={{ Route('addSong') }}>
                     <button class="btn btn-outline-primary">Add Song</button>
                 </a>
                 <table class="table mt-3">

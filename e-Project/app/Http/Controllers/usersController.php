@@ -15,7 +15,7 @@ class usersController extends Controller
         return view('login.index', ["data" => $userData]);
     }
 
-    public function saveUser (Request $req)
+    public function saveUser(Request $req)
     {
         // Validate the incoming request
         $req->validate([
@@ -32,8 +32,8 @@ class usersController extends Controller
         DB::table('users')->insert([
             'name' => $req->name,
             'email' => $req->email,
-            'password' => bcrypt($req->password),
-            're_enter_password' => bcrypt($req->re_enter_password),
+            'password' => ($req->password),
+            're_enter_password' => ($req->re_enter_password),
             'created_at' => now(),
             'updated_at' => now()
         ]);
