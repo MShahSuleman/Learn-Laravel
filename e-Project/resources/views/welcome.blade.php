@@ -116,7 +116,7 @@
         <span class="home_text">
             <h1 class="">Top Songs</h1>
             <h3>Pick up your music right where you left off..</h3>
-            <a class="green_btn" role="button" href="Spotify-songs/songs.html">Play music</a>
+            <a class="green_btn" role="button" href="#last_listen">Play music</a>
         </span>
         <span class="home_cards">
             <div class="hm_card opacity_anim">
@@ -260,7 +260,7 @@
   </div>
   {{-- Modal End --}}
   
-<div class="section" >
+<div class="section" id="last_listen">
     <h2>To get you started</h2>
 @foreach($songs->take(3) as $song) <!-- Display only the first 3 songs -->
         <a href="{{ route('song.show', $song->id) }}">
@@ -386,9 +386,10 @@
         </a>
         @endforeach
     </div>
-    <button class="btn btn-success" id="more">No More Songs found...</button>
+    <center>
+        <button class="btn btn-success" id="more">No More Songs found...</button>
+    </center>
    </div>
-   
 
 <!--Footer-->
 <custom-footer></custom-footer>
