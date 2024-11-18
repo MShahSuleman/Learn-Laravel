@@ -114,10 +114,8 @@
     <div class="hm_gradient-2"></div>
     <div class="container hm_cont">
         <span class="home_text">
-            <!-- <small>Recently Songs</small> -->
             <h1 class="">Top Songs</h1>
             <h3>Pick up your music right where you left off..</h3>
-            <!-- <a class="green_btn" role="button" href="https://spotify-clone-oguz3.web.app/">Play music</a> -->
             <a class="green_btn" role="button" href="Spotify-songs/songs.html">Play music</a>
         </span>
         <span class="home_cards">
@@ -264,19 +262,6 @@
   
 <div class="section" >
     <h2>To get you started</h2>
-    {{-- <a href="{{ url('/open-letter') }}">
-        <div class="card">
-                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-                        <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-                    </svg>
-                    <img alt="Album cover" height="200" src="./src/open letter.jpg" width="200"/>
-                    <div class="title">Open Letter</div>
-                    <div class="description card-title">
-                        Faisal Kapadia, aleemrk and Talhah Anjum
-                    </div>
-        </div> --}}
-</a>
-
 @foreach($songs->take(3) as $song) <!-- Display only the first 3 songs -->
         <a href="{{ route('song.show', $song->id) }}">
             <div class="card">   
@@ -401,134 +386,7 @@
         </a>
         @endforeach
     </div>
-    <center>
     <button class="btn btn-success more">No More Songs found...</button>
-</center>
-        {{-- <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer; float:right" >Show More</a>
-        <h2>Suggested for You </h2>
-        <div class="card">
-            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-                <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/kaun talha.png" width="200"/>
-        <div class="title">
-            Kaun Talha
-        </div>
-        <div class="description card-title">
-            Talha Anjum, Umair
-        </div>
-    </div>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-     <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/Jo tum mery ho.png" width="200"/>
-     <div class="title">
-         Jo Tum Mery Ho
-        </div>
-        <div class="description card-title">
-            Anuv Jain and Angad Bahra
-        </div>
-    </div>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/tu hai kahan.webp" width="200"/>
-        <div class="title">
-            Tu Hai Kahan
-    </div>
-    <div class="description card-title">
-        AUR Ahad-Usama-Rafey
-    </div>
-</div>
-<div class="card">
-    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-        <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-    </svg>
-    <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/tauba tauba.png" width="200"/>
-        <div class="title">
-            Tauba Tauba
-        </div>
-        <div class="description card-title">
-            From Bad Newz, Karan Aujla
-     </div>
-    </div> 
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/on top 2.png" width="200"/>
-       <div class="title">
-           On Top 2 
-        </div>
-        <div class="description card-title">
-            Karan, Aujla 
-        </div>
-    </div>
-    <!-- <button class="btn btn-success" id="show-more-btn">Show More</button> -->
-    <span class="second-row">
-        <div class="card">
-            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-                <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-            </svg>
-            <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/once opon a time in mumbai.png" width="200"/>
-            <div class="title">
-                Once Opon a Time in Mumbai 
-       </div>
-       <div class="description card-title">
-           2013, EP 
-        </div>
-    </div>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/nadaniyan.png" width="200"/>
-        <div class="title">
-            Nadaniyan 
-        </div>
-        <div class="description card-title">
-            Akshath, Aisha Ahmed 
-        </div>
-    </div>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/shikayat.png" width="200"/>
-        <div class="title">
-            Shikayat 
-        </div>
-        <div class="description card-title">
-            Ahad, Raffey, Usama  
-       </div>
-    </div>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/kabhi main kabhi tum.png" width="200"/>
-        <div class="title">
-            Kabhi Main Kabhi Tum
-        </div>
-        <div class="description card-title">
-            Rafey Anwer and Taimoor Baig 
-       </div>
-    </div>
-    <div class="card">
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-           <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-         </svg>
-         <img alt="Album cover of Kaun Talha by Talha Anjum, Umair" height="200" src="./src/lajawab.png" width="200"/>
-         <div class="title">
-             Lajawab
-            </div>
-       <div class="description card-title">
-           Rafey Anwer and Taimoor Baig 
-        </div>
-    </div>
-</span> --}}
    </div>
    
 

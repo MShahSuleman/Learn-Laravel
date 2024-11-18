@@ -510,6 +510,11 @@ html {
 }
 .more{
   width: 80px;
+  text-align: center;
 }
 
 };
+.more{
+  width: 80px;
+  text-align: center !important;
+}
