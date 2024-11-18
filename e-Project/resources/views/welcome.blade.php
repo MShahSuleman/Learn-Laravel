@@ -276,26 +276,7 @@
                     </div>
         </div> --}}
 </a>
-{{-- @foreach($songs as $song)
-<a href="{{ route('song.show', $song->id) }}">
-    <div class="card">   
-        <!-- Card Content Start -->
-        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
-            <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
-        </svg>
-        <img alt="Album cover of {{ $song->title }}" height="200" src="{{$song->image_path}}" width="200"/>
-        <div class="title">
-            {{ $song->title }}
-        </div>
-        <div class="description card-title">
-            {{ $song->artist }}
-        </div>
-        <!-- Card Content End -->
-        
-    </div>
-    
-</a>
-@endforeach --}}
+
 @foreach($songs->take(3) as $song) <!-- Display only the first 3 songs -->
         <a href="{{ route('song.show', $song->id) }}">
             <div class="card">   
@@ -420,7 +401,9 @@
         </a>
         @endforeach
     </div>
-
+    <center>
+    <button class="btn btn-success">No More Songs found...</button>
+</center>
         {{-- <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer; float:right" >Show More</a>
         <h2>Suggested for You </h2>
         <div class="card">
