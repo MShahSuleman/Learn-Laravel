@@ -26,18 +26,18 @@ Route::get('/', function () {
     return view('welcome', compact('songs'));
 });
 
-
+// Songs CRUD Routes
 Route::get('/crud', [PersonController::class, 'showPerson'])->name('home');
 Route::post('/save', [PersonController::class, 'savePerson'])->name('save');
-Route::view('/addUser', 'person.form')->name('add');
+Route::view('/addSong', 'person.songForm')->name('add');
 Route::get('/edit/{id}', [PersonController::class, 'editPerson'])->name('edit');
 Route::post('/update', [PersonController::class, 'updatePerson'])->name('update');
 Route::get('/delete/{id}', [PersonController::class, 'deletePerson'])->name('delete');
 
-
+// Users CRUD Routes
 Route::get('/users', [usersController::class, 'showuser'])->name('home');
 Route::post('/saveUser', [usersController::class, 'saveUser'])->name('save');
 Route::view('/addUser', 'login.form')->name('add');
-Route::get('/edit/{id}', [usersController::class, 'editUser'])->name('edit');
-Route::post('/update', [usersController::class, 'updateUser'])->name('update');
-Route::get('/delete/{id}', [usersController::class, 'deleteUser'])->name('delete');
+Route::get('/editUser/{id}', [usersController::class, 'editUser'])->name('edit');
+Route::post('/updateUser', [usersController::class, 'updateUser'])->name('update');
+Route::get('/deleteUser/{id}', [usersController::class, 'deleteUser'])->name('delete');

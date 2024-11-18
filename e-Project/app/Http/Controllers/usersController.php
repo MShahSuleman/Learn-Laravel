@@ -16,36 +16,30 @@ class usersController extends Controller
     }
 
     public function saveUser (Request $req)
-{
-    // Validate the incoming request
-    $req->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|unique:users,email',
-        'password' => 'required|string|min:8',
-        're_enter_password' => 'required|string|same:password',
-    ]);
-
-    $existingUser  = DB::table('users')->where('email', $req->email)->first();
-    if ($existingUser) {
-        return redirect()->back()->with('error', 'Email already exists');
-    }
-
-    // Insert the new user
-    $user = DB::table('users')->insert([
-        'name' => $req->name,
-        'email' => $req->email,
-        'password' => bcrypt($req->password), 
-        're_enter_password' => $req->re_enter_password,
-        'created_at' => now(),
-        'updated_at' => now()
-    ]);
-
-    if ($user) {
+    {
+        // Validate the incoming request
+        $req->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'password' => 'required|string|min:8',
+            're_enter_password' => 'required|string|same:password',
+        ]);
+    
+        $existingUser  = DB::table('users')->where('email', $req->email)->first();
+        if ($existingUser ) {
+            return redirect()->back()->withInput()->with('error', 'User already exists');
+        }
+        DB::table('users')->insert([
+            'name' => $req->name,
+            'email' => $req->email,
+            'password' => bcrypt($req->password),
+            're_enter_password' => bcrypt($req->re_enter_password),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+    
         return redirect()->route('home')->with('success', 'User  added successfully!');
-    } else {
-        return redirect()->back()->with('error', 'Error adding user.');
     }
-}
     
     public function editUser(Request $req)
     {

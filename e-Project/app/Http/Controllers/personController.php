@@ -12,20 +12,11 @@ class personController extends Controller
     {
         $personData =  DB::table('songs')->get();
         // return $personData;
-        return view('person.index', ["data" => $personData]);
+        return view('person.indexSong', ["data" => $personData]);
     }
 
     public function savePerson(Request $req)
     {
-        // $req->validate([
-        //     'title' => 'required|max:255',
-        //     'artist' => 'required|max:255',
-        //     'duration' => 'required|max:255',
-        //     'year' => 'required|numeric|digits:4',
-        //     'image_path' => 'required|url',
-        //     'video_path' => 'required|url',
-        // ]);
-
         $song = DB::table('songs')->insert(
             [
                 'title' => $req->title,
@@ -52,19 +43,11 @@ class personController extends Controller
         $singlePerson = DB::table('songs')->where('id', $req->id)->get();
 
         // return $singlePerson;
-        return view('person.editUser', ["data" => $singlePerson]);
+        return view('person.editSong', ["data" => $singlePerson]);
     }
 
     public function updatePerson(Request $req)
     {
-        // $req->validate([
-        //     'title' => 'required|max:255',
-        //     'artist' => 'required|max:255',
-        //     'duration' => 'required|max:255',
-        //     'year' => 'required|integer|digits:4',
-        //     'image_path' => 'required|url',
-        //     'video_path' => 'required|url',
-        // ]);
         $updateSong = DB::table('songs')->where('id', $req->id)->update([
             'title' => $req->title,
             'artist' => $req->artist,

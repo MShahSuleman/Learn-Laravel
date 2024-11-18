@@ -4,6 +4,17 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-8">
+                @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
                 <h2 class="text-center">Add Song</h2>
                 <form action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
