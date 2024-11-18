@@ -15,26 +15,37 @@ class usersController extends Controller
         return view('login.index', ["data" => $userData]);
     }
 
-    public function saveUser(Request $req)
-    {
-        $user = DB::table('users')->insert(
-            [
-                'name' => $req->name,
-                'email' => $req->email,
-                'password' => $req->password,
-                're_enter_password' => $req->re_enter_password,
-                'created_at' => now(),
-                'updated_at' => now()
-            ]
-        );
+    public function saveUser (Request $req)
+{
+    // Validate the incoming request
+    $req->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|string|min:8',
+        're_enter_password' => 'required|string|same:password',
+    ]);
 
-        if ($user) {
-            // return 'Data Saved';
-            return redirect()->route('home');
-        } else {
-            return 'Error';
-        }
+    $existingUser  = DB::table('users')->where('email', $req->email)->first();
+    if ($existingUser) {
+        return redirect()->back()->with('error', 'Email already exists');
     }
+
+    // Insert the new user
+    $user = DB::table('users')->insert([
+        'name' => $req->name,
+        'email' => $req->email,
+        'password' => bcrypt($req->password), 
+        're_enter_password' => $req->re_enter_password,
+        'created_at' => now(),
+        'updated_at' => now()
+    ]);
+
+    if ($user) {
+        return redirect()->route('home')->with('success', 'User  added successfully!');
+    } else {
+        return redirect()->back()->with('error', 'Error adding user.');
+    }
+}
     
     public function editUser(Request $req)
     {

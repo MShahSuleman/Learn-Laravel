@@ -12,6 +12,7 @@
                     <thead>
                         <th>S.No</th>
                         <th>Name</th>
+                        <th>Email</th>
                         <th>Password</th>
                         <th>Re_enter_password</th>
                     </thead>
@@ -21,8 +22,9 @@
                             <tr>
                                 <td>{{ $users->id }}</td> 
                                 <td>{{ $users->name }}</td>
+                                <td>{{ $users->email }}</td>
                                 <td>{{ $users->password }}</td>
-                                <td>{{ $users->reenterpassword }}</td>
+                                <td>{{ $users->re_enter_password }}</td>
                                 <td class="d-flex">
                                     <a href="" class="btn btn-outline-primary"> View </a>&nbsp;
                                     <a href={{ Route('edit', $users->id) }} class="btn btn-outline-success">
