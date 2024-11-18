@@ -402,7 +402,7 @@
         @endforeach
     </div>
     <center>
-    <button class="btn btn-success">No More Songs found...</button>
+    <button class="btn btn-success more">No More Songs found...</button>
 </center>
         {{-- <a  id="show-more-btn" style="color: white; font-size: 16px; cursor: pointer; float:right" >Show More</a>
         <h2>Suggested for You </h2>
