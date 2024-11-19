@@ -23,7 +23,7 @@ Route::get('/song/{id}', [SongController::class, 'show'])->name('song.show');
 
 Route::get('/', function () {
     $songs = Song::all(); // Fetch all songs from database
-    return view('welcome', compact('songs'));
+    return view('user', compact('songs'));
 });
 
 // Songs CRUD Routes

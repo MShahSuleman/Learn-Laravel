@@ -27,7 +27,7 @@
         </div>
         @endif
 
-        <div class="form-container sign-up">
+        <div class="form-container sign-up" id="sign-up">
             <form>
                 <h1>Create Account</h1>
                 <input type="text" placeholder="Name">

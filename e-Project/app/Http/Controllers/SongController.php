@@ -11,9 +11,16 @@ class SongController extends Controller
         $songs = Song::all(); // Fetch all songs
 
         // Return the welcome view with all songs
+        return view('user', compact('songs'));
+    }
+    public function indexPage()
+    {
+        // Fetch all songs from the database
+        $songs = Song::all(); // Fetch all songs
+
+        // Return the welcome view with all songs
         return view('welcome', compact('songs'));
     }
-
     public function show($id)
     {
         // Fetch the song by ID or fail with a 404
