@@ -14,22 +14,11 @@ Route::get('/about', function () {
     return view('pages.aboutus');
 });
 
-// Route::get('/song/{id}', [SongController::class, 'show'])->name('song.show');
-
-// Route::get('/', function () {
-//     $songs = Song::all(); // Fetch all songs from database
-//     return view('user', compact('songs'));
-// });
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// })->name('welcome');
-
 Route::get('/', [SongController::class, 'index']);
 
 Route::post('/saveUser', [usersController::class, 'saveUser'])->name('save');
 Route::get('/welcome', [SongController::class, 'indexPage'])->name('welcome');
 Route::get('/song/{id}', [SongController::class, 'show'])->name('song.show');
-
 
 
 // Songs CRUD Routes

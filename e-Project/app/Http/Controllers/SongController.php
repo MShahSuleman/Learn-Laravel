@@ -8,7 +8,7 @@ class SongController extends Controller
     public function index()
 {
     $songs = Song::all(); // Fetch all songs
-    return view('user', compact('songs'));
+    return view('viewuser', compact('songs'));
 }
 
 public function indexPage()
