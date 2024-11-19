@@ -32,7 +32,7 @@ class personController extends Controller
 
         if ($song) {
             // return 'Data Saved';
-            return redirect()->route('home');
+            return redirect()->route('songsHome');
         } else {
             return 'Error';
         }
@@ -67,11 +67,11 @@ class personController extends Controller
 
     public function deletePerson(String $id)
     {
-        $delete  = DB::table('songs')->where('id', $id)->delete();
+        $deleteSong  = DB::table('songs')->where('id', $id)->delete();
         // return $id;
 
-        if ($delete) {
-            return redirect()->route('home');
+        if ($deleteSong) {
+            return redirect()->route('songsHome');
         } else {
             return 'An Error Occurd';
         }

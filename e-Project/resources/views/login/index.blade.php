@@ -36,11 +36,7 @@
                             </tr>
                         @endforeach
                         <tr></tr>
-
-
                     </tbody>
-
-
                 </table>
             </div>
         </div>
