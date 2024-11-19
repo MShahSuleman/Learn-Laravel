@@ -10,10 +10,10 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-let passwordMessage = document.querySelector(".pass");  
-let first = document.querySelector('.first');
-let second = document.querySelector(".second");
-let btn =  document.querySelector('.button');
+let first = document.getElementById("password");  
+let second = document.getElementById('reenterpassword');
+let btn = document.querySelector(".signinButton");
+let passwordMessage =  document.querySelector('.pass');
 let min = document.querySelector("#min");
 
 let combine = first + second;
@@ -27,13 +27,14 @@ btn.addEventListener('click',()=>{
     }
 })
 
-btn.addEventListener('click',()=>{
-    if(second.value === first.value )  
-    {   
+
+second.addEventListener('input', () => {
+    if (second.value === first.value) {
         passwordMessage.style.display = "none";
+        btn.removeAttribute('disabled');
     } else {
-        passwordMessage.style.display="flex";
-        btn.type="button";
-    } 
-})
+        passwordMessage.style.display = "flex";
+        btn.setAttribute('disabled', '');
+    }
+});
 

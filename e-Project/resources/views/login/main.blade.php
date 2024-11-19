@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
 ">
     <title>Home</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
 </head>
 
 <body>
