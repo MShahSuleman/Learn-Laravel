@@ -381,7 +381,7 @@
 <!--Footer-->
 <script> 
     document.querySelectorAll('.card').forEach(card => {
-        card.style.cursor = 'pointer';
+        card.style.cursyor = 'pointer';
         card.addEventListener('click', function() {
             var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
             modal.show();
