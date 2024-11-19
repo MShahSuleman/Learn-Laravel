@@ -15,15 +15,7 @@
     <div class="container" id="container">
         @if(session('error'))
         <div class="alert alert-danger">
-            <script>
-            // {{session('error')}}
-        alert("User already Exists")
-        </script>
-        </div>
-        @endif
-        @if(session('success'))
-        <div class="alert alert-success">
-            {{session('error')}}
+            {{ session('error') }}
         </div>
         @endif
 
@@ -46,7 +38,6 @@
                 <p id="min">Password must be 8 Characters Long</p>
                 <input type="password" class="form-control" id="reenterpassword" placeholder="Re Enter Your Password" name="re_enter_password" required>
                 <p style="color: red" class="pass">Password Mismatch!</p>
-                <a href="#">Forget Your Password?</a>
                 <button class="signinButton">Sign In</button>
             </form>
         </div>
