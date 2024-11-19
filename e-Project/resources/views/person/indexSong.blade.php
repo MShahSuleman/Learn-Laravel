@@ -35,7 +35,7 @@
                                 <td>{{ $songs->updated_at }}</td>
                                 <td class="d-flex">
                                     <a href="" class="btn btn-outline-primary"> View </a>&nbsp;
-                                    <a href={{ Route('edit', $songs->id) }} class="btn btn-outline-success">
+                                    <a href={{ Route('editSong', $songs->id) }} class="btn btn-outline-success">
                                         Edit
                                     </a>
                                     &nbsp;

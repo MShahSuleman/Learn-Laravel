@@ -30,8 +30,8 @@ Route::get('/', function () {
 Route::get('/crud', [PersonController::class, 'showPerson'])->name('songsHome');
 Route::post('/save', [PersonController::class, 'savePerson'])->name('saveSong');
 Route::view('/addSong', 'person.songForm')->name('addSong');
-Route::get('/edit/{id}', [PersonController::class, 'editPerson'])->name('edit');
-Route::post('/update', [PersonController::class, 'updatePerson'])->name('update');
+Route::get('/edit/{id}', [PersonController::class, 'editPerson'])->name('editSong');
+Route::post('/update', [PersonController::class, 'updatePerson'])->name('updateSong');
 Route::get('/deleteSong/{id}', [PersonController::class, 'deletePerson'])->name('deleteSong');
 
 // Users CRUD Routes

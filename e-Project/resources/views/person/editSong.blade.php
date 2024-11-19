@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-8">
                 <h2 class="text-center">Edit User</h2>
-                <form action="{{ route('update') }}" method="POST">
+                <form action="{{ route('updateSong') }}" method="POST">
                     @csrf
                     <input type="hidden" name="id" value="{{ $data[0]->id }}">
                     <div class="mb-3">

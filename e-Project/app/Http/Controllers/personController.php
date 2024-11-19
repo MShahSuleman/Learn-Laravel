@@ -59,7 +59,7 @@ class personController extends Controller
         ]);
 
         if ($updateSong) {
-            return redirect()->route('home')->with('success', 'Song updated successfully!');
+            return redirect()->route('songsHome')->with('success', 'Song updated successfully!');
         } else {
             return redirect()->back()->with('error', 'Error updating song.');
         }
