@@ -240,30 +240,11 @@
         </div>
     </div>
 </div>
-{{-- Modal Start --}}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black">Sound Group</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style="color: black">
-          To continue listening on Sound Group, first you have to <strong style="cursor: pointer">Login/SignUp</strong> 
-        </div>
-        <div class="modal-footer">
-          <a href="/login"><button type="button" class="btn btn-outline-success" >login</button></a>
-          <a href="/login"><button type="button" class="btn btn-success">SignUp</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  {{-- Modal End --}}
-  
 
-  <div class="section" id="last_listen">
+<div class="section" id="last_listen">
     <h2>To get you started</h2>
 @foreach($songs->take(3) as $song) 
+        <a href="{{ route('song.show', $song->id) }}">
             <div class="card">   
                 <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
@@ -272,6 +253,7 @@
                 <div class="title">{{ $song->title }}</div>
                 <div class="description card-title">{{ $song->artist }}</div>
             </div>
+        </a>
     @endforeach
 
 <!-- Artists Section -->
@@ -373,6 +355,7 @@
         <h2>Suggested for You</h2>
     <div class="card-row">
         @foreach($songs->slice(3) as $song) 
+        <a href="{{ route('song.show', $song->id) }}">
             <div class="card">
                 <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
@@ -381,6 +364,7 @@
                 <div class="title">{{ $song->title }}</div>
                 <div class="description card-title">{{ $song->artist }}</div>
             </div>
+        </a>
         @endforeach
     </div>
     <center>
@@ -391,24 +375,9 @@
 <!--Footer-->
 <custom-footer></custom-footer>
 <!--Footer-->
-<script> 
-    document.querySelectorAll('.card').forEach(card => {
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', function() {
-            var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-            modal.show();
-        });
-    });
-    document.querySelectorAll('.card-1').forEach(artists => {
-        artists.style.cursor = 'pointer'; 
-        artists.addEventListener('click', function() {
-            var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-            modal.show();
-        });
-    });
-    </script>
-    
+   
 <div id="opacity" class="opacity"></div>
+<!-- <script src="./component/header.js"></script> -->
 <script src="/component/footer.js"></script>
 <script src="/js/main.js"></script>
 <script src="/src/script.js"></script>
