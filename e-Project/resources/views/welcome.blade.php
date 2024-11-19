@@ -245,7 +245,7 @@
     <h2>To get you started</h2>
 @foreach($songs->take(3) as $song) 
         <a href="{{ route('song.show', $song->id) }}">
-            <div class="card">   
+            <div class="card">
                 <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE play" width="24" height="24">
                     <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z" fill="black"></path>
                 </svg>
@@ -348,8 +348,8 @@
             </div>
         </div>   <!-- 8th Card End -->
     </marquee>
-    
     <!-- Artists End -->
+
     <!-- Cards Start -->
     <div class="section">
         <h2>Suggested for You</h2>
@@ -377,7 +377,6 @@
 <!--Footer-->
    
 <div id="opacity" class="opacity"></div>
-<!-- <script src="./component/header.js"></script> -->
 <script src="/component/footer.js"></script>
 <script src="/js/main.js"></script>
 <script src="/src/script.js"></script>

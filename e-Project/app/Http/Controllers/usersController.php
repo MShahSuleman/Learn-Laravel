@@ -38,7 +38,7 @@ class usersController extends Controller
             'updated_at' => now()
         ]);
     
-        return redirect()->route('home')->with('success', 'User  added successfully!');
+        return redirect()->route('welcome')->with('success', 'User  added successfully!');
     }
     
     public function editUser(Request $req)
