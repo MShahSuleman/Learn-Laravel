@@ -15,7 +15,7 @@ class usersController extends Controller
         return view('login.index', ["data" => $userData]);
     }
 
-    public function saveUser(Request $req)
+    public function saveUser (Request $req)
     {
         // Validate the incoming request
         $req->validate([
@@ -38,7 +38,8 @@ class usersController extends Controller
             'updated_at' => now()
         ]);
     
-        return redirect()->route('welcome')->with('success', 'User  added successfully!');
+        // return redirect()->route('welcome')->with('success', 'User  added successfully!');
+        return redirect()->route('welcome')->with('success', 'User  created successfully!');
     }
     
     public function editUser(Request $req)
